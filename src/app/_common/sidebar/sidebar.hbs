@@ -1,0 +1,281 @@
+<aside class="sidebar">
+	<div class="sidebar-container">
+
+		{{> app/_common/sidebar/header/header}}
+
+		<nav class="menu">
+			<ul class="sidebar-menu metismenu" id="sidebar-menu">
+
+				<li {{#is pagename "===" "dashboard"}}class="active"{{/is}} >
+					<a href="index">
+						<i class="fa fa-home"></i> Dash
+					</a>
+				</li>
+
+
+				<li {{#is pagename "in" "items-list,item-editor"}}class="active open"{{/is}} >
+
+					<a href="">
+						<i class="fa fa-th-large"></i> Worker Manager
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "items-list"}}class="active"{{/is}} >
+							<a href="items-list">
+								Worker List
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "item-editor"}}class="active"{{/is}} >
+							<a href="item-editor">
+								Add Worker
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li {{#is pagename "===" "forms"}}class="active"{{/is}} >
+					<a href="forms">
+						<i class="fa fa-pencil-square-o"></i> Forms
+					</a>
+				</li>
+				<li {{#is pagename "in" "charts-flot,charts-morris"}}class="active open"{{/is}} >
+					<a href="">
+						<i class="fa fa-bar-chart"></i> Charts
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "charts-flot"}}class="active"{{/is}} >
+							<a href="charts-flot">
+								Flot Charts
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "charts-morris"}}class="active"{{/is}} >
+							<a href="charts-morris">
+								Morris Charts
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li {{#is pagename "in" "static-tables,responsive-tables"}}class="active open"{{/is}} >
+					<a href="">
+						<i class="fa fa-table"></i> Blocks
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "static-tables"}}class="active"{{/is}} >
+							<a href="static-tables">
+								Blocks Found
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "responsive-tables"}}class="active"{{/is}} >
+							<a href="responsive-tables">
+								Block Explorer
+							</a>
+						</li>
+
+					</ul>
+				</li>
+
+				<li {{#is pagename "in" "buttons,grid,icons,cards,typography"}}
+						class="active open"
+					{{/is}} >
+					<a href="">
+						<i class="fa fa-desktop"></i> UI Elements
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "buttons"}}class="active"{{/is}}>
+							<a href="buttons">
+								Buttons
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "cards"}}class="active"{{/is}}>
+							<a href="cards">
+								Cards
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "typography"}}class="active"{{/is}}>
+							<a href="typography">
+								Typography
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "icons"}}class="active"{{/is}}>
+							<a href="icons">
+								Icons
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "grid"}}class="active"{{/is}}>
+							<a href="grid">
+								Grid
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li {{#is pagename "in" "login,signup,reset,error-404,error-500"}}
+						class="active open"
+					{{/is}} >
+
+					<a href="">
+						<i class="fa fa-file-text-o"></i> Pages
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "login"}}class="active"{{/is}}>
+							<a href="login">
+								Login
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "signup"}}class="active"{{/is}}>
+							<a href="signup">
+								Sign Up
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "reset"}}class="active"{{/is}}>
+							<a href="reset">
+								Reset
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "error-404"}}class="active"{{/is}}>
+							<a href="error-404">
+								Error 404 App
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "error-404-alt"}}class="active"{{/is}}>
+							<a href="error-404-alt">
+								Error 404 Global
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "error-500"}}class="active"{{/is}}>
+							<a href="error-500">
+								Error 500 App
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "error-500-alt"}}class="active"{{/is}}>
+							<a href="error-500-alt">
+								Error 500 Global
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="">
+						<i class="fa fa-sitemap"></i> Menu Levels
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+
+						<li>
+							<a href="#">
+								Second Level Item
+								<i class="fa arrow"></i>
+							</a>
+
+							<ul class="sidebar-nav">
+
+								<li>
+									<a href="#">
+										Third Level Item
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										Third Level Item
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">
+								Second Level Item
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								Second Level Item
+								<i class="fa arrow"></i>
+							</a>
+
+							<ul class="sidebar-nav">
+
+								<li>
+									<a href="#">
+										Third Level Item
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										Third Level Item
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										Third Level Item
+										<i class="fa arrow"></i>
+									</a>
+
+									<ul class="sidebar-nav">
+
+										<li>
+											<a href="#">
+												Fourth Level Item
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												Fourth Level Item
+											</a>
+										</li>
+									</ul>
+
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>
+
+				<li {{#is pagename "===" "docs"}}class="active"{{/is}} >
+					<a href="https://github.com/modularcode/modular-admin-html">
+						<i class="fa fa-github-alt"></i> Theme Docs
+					</a>
+				</li>
+
+
+			</ul>
+		</nav>
+
+	</div>
+
+	{{> app/_common/sidebar/customize/customize}}
+
+</aside>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>

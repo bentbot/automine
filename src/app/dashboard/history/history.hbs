@@ -1,0 +1,34 @@
+<div class="card sameheight-item" data-exclude="xs" id="dashboard-history">
+	<div class="card-header card-header-sm bordered">
+		<div class="header-block">
+			<h3 class="title">Statistics</h3>
+		</div>
+        <ul class="nav nav-tabs pull-right" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" href="#visits" role="tab" data-toggle="tab">Hash</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#downloads" role="tab" data-toggle="tab">Coins</a>
+			</li>
+		</ul>
+    </div>
+	<div class="card-block">
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active fade show" id="visits">
+				<p class="title-description">
+					Global hash rate
+				</p>
+
+				<div id="dashboard-visits-chart"></div>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="downloads">
+				<p class="title-description">
+					Number of coins mined in the last 24 hours.
+				</p>
+
+				<div id="dashboard-downloads-chart"></div>
+			</div>
+		</div>
+	</div>
+</div>

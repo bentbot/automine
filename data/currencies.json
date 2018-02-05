@@ -1,0 +1,114 @@
+{
+  "fiat": [
+    {
+      "id": "usd",
+      "name": "US Dollar",
+      "symbol": "usd",
+      "icon": "fa-dollar"
+    },
+    {
+      "id": "cad",
+      "name": "Canadian Dollar",
+      "symbol": "cad",
+      "icon": "fa-dollar"
+    },
+    {
+      "id": "cny",
+      "name": "Chinese Yuan",
+      "symbol": "cny",
+      "icon": "fa-cny"
+    },
+    {
+      "id": "euro",
+      "name": "Euro",
+      "symbol": "euro",
+      "icon": "fa-euro"
+    },
+    {
+      "id": "gbp",
+      "name": "British Pound",
+      "symbol": "gbp",
+      "icon": "fa-gbp"
+    },
+    {
+      "id": "rub",
+      "name": "Russian Ruble",
+      "symbol": "rub",
+      "icon": "fa-rub"
+    },
+    {
+      "id": "inr",
+      "name": "Rupee",
+      "symbol": "inr",
+      "icon": "fa-inr"
+    },
+    {
+      "id": "jpy",
+      "name": "Japanese Yen",
+      "symbol": "jpy",
+      "icon": "fa-jpy"
+    }
+  ],
+  "crypto": [
+    {
+      "id": "bitcoin",
+      "name": "Bitcoin",
+      "symbol": "btc",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "bitcoincash",
+      "name": "Bitcoin Cash",
+      "symbol": "bch",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "cannabiscoin",
+      "name": "Cannabis coin",
+      "symbol": "cann",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "dashcoin",
+      "name": "Dash",
+      "symbol": "dash",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "ethereum",
+      "name": "Ethereum",
+      "symbol": "eth",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "ethclassic",
+      "name": "Ethereum Classic",
+      "symbol": "etc",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "litecoin",
+      "name": "Litecoin",
+      "symbol": "ltc",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "zcash",
+      "name": "ZCash",
+      "symbol": "zec",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "ripple",
+      "name": "Ripple",
+      "symbol": "xrp",
+      "icon": "fa-btc"
+    },
+    {
+      "id": "monero",
+      "name": "Monero",
+      "symbol": "xmr",
+      "icon": "fa-btc"
+    }
+  ]
+}

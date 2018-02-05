@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "username": "root",
+      "email": "bentbot@outlook.com",
+      "password": "123"
+    }
+  ],
+  "workers": [
+    {
+      "id": "0",
+      "name": "Worker",
+      "ip": "192.168.1.150",
+      "username": "root",
+      "password": "s027980027"
+    }
+  ]
+}
