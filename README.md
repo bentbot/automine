@@ -11,6 +11,17 @@ BitMain's new Antminer series offers hashing speeds and IP administrator access.
   - Import a HTML file and watch it magically convert to Markdown
   - Drag and drop images (requires your Dropbox account be linked)
 
+# Useful Information 
+ - `get_miner_conf.cgi` - Return the current settings of the miner ( Miner Config page )
+ - `get_miner_status.cgi` - Return the current status of the miner ( Miner Status page )
+
+
+ - `get_kernel_log.cgi`
+ - `get_miner_conf.cgi`
+ - `get_miner_status.cgi`
+ - `get_network_info.cgi`
+ - `get_system_info.cgi`
+
 # System Commands
 
 - `reboot.cgi` - *Reboots entire system (careful)*
@@ -28,3 +39,14 @@ You can also:
   - Use `wget` to download files from the web
 
 
+
+Full list of ASIC Control Panel pages:
+
+cgi_lib.cgi             kill_bmminer2.cgi       passwd.cgi
+create_conf_backup.cgi  kill_cgminer.cgi        reboot.cgi
+get_kernel_log.cgi      minerAdvanced.cgi       reset_conf.cgi
+get_miner_conf.cgi      minerConfiguration.cgi  set_miner_conf.cgi
+get_miner_status.cgi    minerStatus.cgi         set_network_conf.cgi
+get_network_info.cgi    miner_lcd.sh            upgrade.cgi
+get_system_info.cgi     monitor.cgi             upgrade_clear.cgi
+kill_bmminer.cgi        network_diag.cgi        upload_conf.cgi

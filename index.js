@@ -8,21 +8,19 @@ var fs 		= require('fs'),
 	config 	= require('./data/config'),
 	exphbs  = require('express-handlebars'),
 	currencies = require('./data/currencies'),
-	app		= express(), port;
+	app		= express(), port, pot=4445;
 
 var Workers	= require('./lib/worker.manager'),
 	Users	= require('./lib/user.manager');
 
-rand({from: 2000, range: 2000}, function (p) { port = p; });
-	
-const go = {
+var vars = {
 	pagename: 'Automine',
 	currencies: currencies,
 	host: '//localhost',
 	socket: port
 }
 
-go.socketURI = go.host+':'+go.socket+'/socket.io/socket.io.js';
+vars.socketURI = vars.host+':'+vars.socket+'/socket.io/socket.io.js';
 
 // app.set('view engine', 'pug') // Pug / Jade
 app.engine('html', cons.swig)  // Plain HTML / Swig
@@ -39,52 +37,39 @@ app.use('/assets', express.static(__dirname + '/dist/assets'));
 app.use('/css', express.static(__dirname + '/dist/css'));
 app.use('/fonts', express.static(__dirname + '/dist/fonts')); 
 app.use('/js', express.static(__dirname + '/dist/js'));
-
-
-	app.get('/', function (req, res) {
-		if ( Users.loggedIn(req.cookies.auth) ) {
-			res.render('index', go);
-		} else { 
-			res.redirect(301, '/login');
-		}
+	
+	/* GET */
+	
+	app.get('/scan', function (req, res) {
+		let ip = '192.168.1.13'
+		let user = 'root'
+		let password = 'root'
+		Workers.scan(ip, user, password, function(data) {
+			res.send(data);
+		});
 	});
 
-	app.get('/:page', function (req, res) {
-		if ( Users.loggedIn(req.cookies.auth) ) {
-			res.render(req.params.page, go);
-		} else { 
-			res.redirect(301, '/login');
-		}
+	app.get('/api/:option', function (req, res) {
+		ip = '192.168.1.13'
+		user = 'root'
+		password = 'root'
+		Workers.getStatus(ip, user, password, function(data) {
+			res.send(data);
+		})
 	});
 
-	app.get('/login', function (req, res) {
-		res.render('login', go);
-	});
-
-	app.get('/signup', function (req, res) {
-		res.render('signup', go);
-	});
-
-
-
-
+	/** POST **/
 	app.post('/signup', function (req, res) {
 		Users.setup( req.body, function (loggedIn, token) {
 			if ( loggedIn == true ) res.cookie('auth', token);
-			res.redirect(301,'/');
 		});
 	}); 
 
 	app.post('/login', function (req, res) {
 		Users.login( req.body, function (loggedIn, token) {
 			if ( loggedIn == true ) res.cookie('auth', token);
-			res.redirect(301,'/');
+			res.redirect('/');
 		});
-	});
-
-	app.get('/logout', function (req, res) {
-		res.clearCookie('auth');
-		res.redirect(301,'/');
 	});
 
 	app.post('/passwordreset', function (req, res) {
@@ -92,14 +77,15 @@ app.use('/js', express.static(__dirname + '/dist/js'));
 		console.log(email);
 	});
 
-	app.get('/api/:option', function (req ,res) {
-		Workers.getWorkers(function(workers) {
-			res.send(workers);
-		})
-	});
+	
 
-// This is where all the magic happens!
-let io 		= require('socket.io')(port);
+
+
+
+
+
+
+let io = require('socket.io')(port);
 io.on('connection', function (socket) {
 
 	socket.on('console', function (data) {
@@ -114,4 +100,10 @@ io.on('connection', function (socket) {
 
 
 
-app.listen(4555);
+
+
+
+
+
+console.log('Listening on '+pot)
+app.listen(pot);

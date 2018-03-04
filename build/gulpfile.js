@@ -21,7 +21,6 @@ var paths = {
 	vendor: require('./paths/vendor')
 };
 
-
 /********************************************
 *   		Load Build Tasks
 *********************************************/
@@ -46,13 +45,12 @@ gulp.task('connect', function() {
 
 gulp.task('server', function() {
 	if (node) node.kill();
-
-	  node = spawn('node', ['../index.js'], {stdio: 'inherit'})
-	  node.on('close', function (code) {
-	    if (code === 8) {
-	      gulp.log('Error detected, waiting for changes...');
-	    }
-	  });
+	node = spawn('node', ['../index.js'], { stdio: 'inherit' });
+	// node.on('close', function (code) {
+	// 	if (code === 8) {
+	// 		gulp.log('Error detected, waiting for changes...');
+	// 	}
+	// });
 })
 
 // Rerun the task when a file changes
