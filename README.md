@@ -1,3 +1,5 @@
+_This project is nothing noteworthy right now other than this readme file below..._
+
 # AntMiner API
 
 BitMain's new Antminer series offers hashing speeds and IP administrator access. The Antminer panel is built-in Perl website with pages located in `/cgi-bin/`. It is possible to gain SSH access to the system and examine the web site files.
